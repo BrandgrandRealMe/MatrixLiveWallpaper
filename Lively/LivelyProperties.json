@@ -1,0 +1,45 @@
+{
+  "colorsLabel": {
+    "type": "label",
+    "value": "Colors"    
+  },
+  "colorsBackground": {
+    "text": "Background Color",
+    "type": "color",
+    "value": "#000000"
+  },
+  "colorsForegroundPrimary": {
+    "text": "Foreground Primary Color",
+    "type": "color",
+    "value": "#00ff00"
+  },
+  "colorsForegroundSecondary": {
+    "text": "Foreground Secondary Color",
+    "type": "color",
+    "value": "#000000"
+  },
+  "colorsEnableGradiant": {
+    "text": "Enable Gradient",
+    "type": "checkbox",
+    "value": false
+  },
+  "miscLabel": {
+    "type": "label",
+    "value": "MISC"    
+  },
+  "miscCharacters": {
+    "text": "Characters",
+    "type": "textbox",
+    "value": "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ"
+  },
+  "miscFallSpeed": {
+    "text": "Fall speed",
+    "type": "textbox",
+    "value": 33
+  },
+  "miscSymbolSize": {
+    "text": "Symbol size",
+    "type": "textbox",
+    "value": 15
+  }
+}

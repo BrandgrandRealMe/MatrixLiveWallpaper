@@ -15,4 +15,4 @@ var colors = { background: qs("bg") || "#000000", foregroundPrimary: qs("fgp") |
 var gradientEnabled = qs("gradient") || false;
 var characters = qs("chars") || "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
 var fallSpeed = qs("fs") || 33;
-var symbolSize = qs("ss") || 10;
+var symbolSize = qs("ss") || 15;

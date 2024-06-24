@@ -1,0 +1,12 @@
+{
+  "AppVersion": "{{ver}}",
+  "Title": "Matrix",
+  "Thumbnail": "thumbnail.jpg",
+  "Preview": "preview.gif",
+  "Desc": "An Ultra customizable Matrix live wallpaper.",
+  "Author": "BrandgrandReal",
+  "License": "MIT",
+  "Contact": "https://github.com/BrandgrandRealMe/MatrixLiveWallpaper",
+  "Type": 1,
+  "FileName": "index.html"
+}
