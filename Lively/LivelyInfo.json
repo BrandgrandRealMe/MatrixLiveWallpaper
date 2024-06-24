@@ -1,9 +1,9 @@
 {
   "AppVersion": "{{ver}}",
   "Title": "Matrix",
-  "Thumbnail": "thumbnail.jpg",
+  "Thumbnail": "thumbnail.png",
   "Preview": "preview.gif",
-  "Desc": "An Ultra customizable Matrix live wallpaper.",
+  "Desc": "Bring the iconic Matrix aesthetic to your desktop with this customizable Matrix rain live wallpaper. Immerse yourself in a cascading stream of green code, just like in the movie. Tweak various aspects of the animation to match your style, from the speed of the rain to the color scheme. Whether you're a die-hard Matrix fan or just love the techy vibe, this live wallpaper is sure to add a touch of cyberpunk flair to your screen.",
   "Author": "BrandgrandReal",
   "License": "MIT",
   "Contact": "https://github.com/BrandgrandRealMe/MatrixLiveWallpaper",
