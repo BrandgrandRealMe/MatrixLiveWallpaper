@@ -1,5 +1,6 @@
 // switch to Hex Because my code uses hex but Wallpaper engine gives rgb
 function RGBToHex(rgb) {
+  console.log(rgb)
   // Choose correct separator
   let sep = rgb.indexOf(",") > -1 ? "," : " ";
   // Turn "rgb(r,g,b)" into [r,g,b]
@@ -19,6 +20,15 @@ function RGBToHex(rgb) {
   return "#" + r + g + b;
 }
 
+function WEtoCSS(color) {
+  var customColor = color.split(' ');
+            customColor = customColor.map(function(c) {
+                return Math.ceil(c * 255);
+            });
+            var customColorAsCSS = 'rgb(' + customColor + ')';
+            return customColorAsCSS
+}
+
 var colors = { background: "#000000", foregroundPrimary: "#00ff00", foregroundSecondary: null, firstCharacter: "#ffffff"};
 
 var gradientEnabled = false;
@@ -29,25 +39,28 @@ var symbolSize = 15;
 window.wallpaperPropertyListener = {
   applyUserProperties: function (properties) {
     if (properties.colorsBackground) {
-      colors.background = RGBToHex(properties.colorsBackground.value);
+      colors.background = RGBToHex(WEtoCSS(properties.colorsBackground.value));
     }
     if (properties.colorsForegroundPrimary) {
-      colors.foregroundPrimary = RGBToHex(properties.colorsForegroundPrimary.value);
+      colors.foregroundPrimary = RGBToHex(WEtoCSS(properties.colorsForegroundPrimary.value));
     }
     if (properties.colorsForegroundSecondary) {
-      colors.foregroundSecondary = RGBToHex(properties.colorsForegroundSecondary.value);
+      colors.foregroundSecondary = RGBToHex(WEtoCSS(properties.colorsForegroundSecondary.value));
     }
     if (properties.colorsEnableGradiant) {
       gradientEnabled = properties.colorsEnableGradiant.value;
     }
     if (properties.miscCharacters) {
-      characters = properties.miscCharacters.value
+      characters = properties.miscCharacters.value;
+      refresh();
     }
     if (properties.miscFallSpeed) {
       fallSpeed = properties.miscFallSpeed.value;
+      refresh();
     }
     if (properties.miscSymbolSize) {
-      symbolSize = properties.miscSymbolSize.value
+      symbolSize = properties.miscSymbolSize.value;
+      refresh();
     }
   }
 }
