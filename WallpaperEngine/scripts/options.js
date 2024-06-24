@@ -26,3 +26,28 @@ var characters = "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKL
 var fallSpeed = 33;
 var symbolSize = 15;
 
+window.wallpaperPropertyListener = {
+  applyUserProperties: function (properties) {
+    if (properties.colorsBackground) {
+      colors.background = properties.colorsBackground.value;
+    }
+    if (properties.colorsForegroundPrimary) {
+      colors.foregroundPrimary = properties.colorsForegroundPrimary.value;
+    }
+    if (properties.colorsForegroundSecondary) {
+      colors.foregroundSecondary = properties.colorsForegroundSecondary.value;
+    }
+    if (properties.colorsEnableGradiant) {
+.     gradientEnabled = properties.colorsEnableGradiant.value;
+    }
+    if (properties.miscCharacters) {
+      characters = properties.miscCharacters.value
+    }
+    if (properties.miscFallSpeed) {
+      fallSpeed = properties.miscFallSpeed.value;
+    }
+    if (properties.miscSymbolSize) {
+      symbolSize = properties.miscSymbolSize.value
+    }
+  }
+}
