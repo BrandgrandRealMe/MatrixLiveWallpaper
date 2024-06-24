@@ -1,0 +1,12 @@
+{
+        "file" : "index.html",
+        "general" : 
+        {
+                "properties" : 
+                {}
+        },
+        "preview" : "preview.gif",
+        "title" : "Matrix",
+        "type" : "web",
+        "version" : "{{ver}}"
+}
