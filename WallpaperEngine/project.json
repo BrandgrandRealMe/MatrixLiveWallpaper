@@ -1,12 +1,72 @@
 {
-        "file" : "index.html",
-        "general" : 
-        {
-                "properties" : 
-                {}
-        },
-        "preview" : "preview.gif",
-        "title" : "Matrix",
-        "type" : "web",
-        "version" : "{{ver}}"
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "colorsLabel": {
+        "index" : 1,
+        "order" : 101,
+        "type": "group",
+        "text": "Colors"
+      },
+      "colorsBackground": {
+        "index" : 2,
+        "order" : 102,
+        "text": "Background Color",
+        "type": "color",
+        "value": "0 0 0"
+      },
+      "colorsForegroundPrimary": {
+        "index" : 3,
+        "order" : 103,
+        "text": "Foreground Primary Color",
+        "type": "color",
+        "value": "0 255 0"
+      },
+      "colorsForegroundSecondary": {
+        "index" : 4,
+        "order" : 104,
+        "text": "Foreground Secondary Color",
+        "type": "color",
+        "value": "0 255 0"
+      },
+      "colorsEnableGradiant": {
+        "index" : 5,
+        "order" : 105,
+        "text": "Enable Gradient",
+        "type": "bool",
+        "value": false
+      },
+      "miscLabel": {
+        "index" : 6,
+        "order" : 106,
+        "type": "group",
+        "text": "MISC"
+      },
+      "miscCharacters": {
+        "index" : 7,
+        "order" : 107,
+        "text": "Characters",
+        "type": "textinput",
+        "value": "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ"
+      },
+      "miscFallSpeed": {
+        "index" : 8,
+        "order" : 108,
+        "text": "Fall speed",
+        "type": "textinput",
+        "value": 33
+      },
+      "miscSymbolSize": {
+        "index" : 9,
+        "order" : 109,
+        "text": "Symbol size",
+        "type": "textinput",
+        "value": 15
+      }
+    }
+  },
+  "preview": "preview.gif",
+  "title": "Matrix",
+  "type": "web",
+  "version": "{{ver}}"
 }
