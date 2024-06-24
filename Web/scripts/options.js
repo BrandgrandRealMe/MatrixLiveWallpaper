@@ -10,7 +10,7 @@ function qs(search_for) { // gets quary strings  (www.example.com/?thing=var&thi
   return "";
 }
 
-var colors = { background: qs("bg") || "rgba(0, 0, 0, .1)", foregroundPrimary: qs("fgp") || "rgb(0,255,0)", foregroundSecondary: qs("fgs") || null, firstCharacter:  qs("fcc") || "rgb(255,255,255)"};
+var colors = { background: qs("bg") || "#000000", foregroundPrimary: qs("fgp") || "#00ff00", foregroundSecondary: qs("fgs") || null, firstCharacter:  qs("fcc") || "#ffffff"};
 
 var gradientEnabled = qs("gradient") || false;
 var characters = qs("chars") || "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
