@@ -29,16 +29,16 @@ var symbolSize = 15;
 window.wallpaperPropertyListener = {
   applyUserProperties: function (properties) {
     if (properties.colorsBackground) {
-      colors.background = properties.colorsBackground.value;
+      colors.background = RGBToHex(properties.colorsBackground.value);
     }
     if (properties.colorsForegroundPrimary) {
-      colors.foregroundPrimary = properties.colorsForegroundPrimary.value;
+      colors.foregroundPrimary = RGBToHex(properties.colorsForegroundPrimary.value);
     }
     if (properties.colorsForegroundSecondary) {
-      colors.foregroundSecondary = properties.colorsForegroundSecondary.value;
+      colors.foregroundSecondary = RGBToHex(properties.colorsForegroundSecondary.value);
     }
     if (properties.colorsEnableGradiant) {
-.     gradientEnabled = properties.colorsEnableGradiant.value;
+      gradientEnabled = properties.colorsEnableGradiant.value;
     }
     if (properties.miscCharacters) {
       characters = properties.miscCharacters.value
