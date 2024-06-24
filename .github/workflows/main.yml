@@ -1,0 +1,62 @@
+name: Release ZIPer and Version adder
+
+on: 
+  release:
+    types: [published]
+
+jobs:
+  update_and_zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get release version
+        id: get_version
+        run: echo "::set-output name=VERSION::${{ github.event.release.tag_name }}"
+
+      - name: Update Lively JSON with version
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: Lively/LivelyInfo.json  # Replace with the path to your JSON file
+          find: '{{ver}}'
+          replace: ${{ steps.get_version.outputs.VERSION }}
+          regex: false
+
+      - name: Update WE JSON with version
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: WallpaperEngine/project.json  # Replace with the path to your JSON file
+          find: '{{ver}}'
+          replace: ${{ steps.get_version.outputs.VERSION }}
+          regex: false
+
+      - name: Rename Lively folder
+        run: mv Lively matrix-lively-${{ steps.get_version.outputs.VERSION }}
+
+      - name: Rename WE 
+        run: mv WallpaperEngine matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
+
+      - name: Zip Lively folder
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip alve-revived-lively-${{ steps.get_version.outputs.VERSION }}
+
+      - name: Zip WE folder
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip alve-revived-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
+
+
+      - name: Upload Lively to Github release
+        uses: Shopify/upload-to-release@v2.0.0
+        with:
+          name: matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip
+          path: matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload WE to Github release
+        uses: Shopify/upload-to-release@v2.0.0
+        with:
+          name: matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip
+          path: matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
