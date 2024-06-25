@@ -36,6 +36,8 @@ function getGradientColor(startColor, endColor, percentage) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Setting up drawId stuff
+var drawId;
 
 // Initialising the canvas
 var canvas = document.querySelector('canvas'),
@@ -60,6 +62,9 @@ function refresh() {
   for (var i = 0; i < columns; i++) {
     drops[i] = 1;
   }
+  
+  if (drawId) clearInterval(drawId);
+  drawId = setInterval(draw, fallSpeed);
 }
 
 // Setting up the draw function
@@ -91,6 +96,6 @@ let resizeObserver = new ResizeObserver(() => {
 
 var MATRIX = document.getElementById("MATRIX");
 resizeObserver.observe(MATRIX);
+
 // Loop the animation & Set size
 refresh();
-setInterval(draw, fallSpeed);
