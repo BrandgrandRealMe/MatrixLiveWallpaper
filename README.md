@@ -2,7 +2,9 @@
 ---
 Bring the iconic Matrix aesthetic to your desktop with this customizable Matrix rain live wallpaper. Immerse yourself in a cascading stream of green code, just like in the movie. Tweak various aspects of the animation to match your style, from the speed of the rain to the color scheme. Whether you're a die-hard Matrix fan or just love the techy vibe, this live wallpaper is sure to add a touch of cyberpunk flair to your screen.
 
-Matrix animated wallpaper for [Lively](https://www.rocksdanister.com/lively/) and [Wallpaper Engine](https://www.wallpaperengine.io/en).
+> Matrix animated wallpaper for [Lively](https://www.rocksdanister.com/lively/) and [Wallpaper Engine](https://www.wallpaperengine.io/en).
+
+> Original matrix html canvas by [Clive Cooper (yaclive)](https://codepen.io/yaclive) found on Codepen [here](https://codepen.io/yaclive/pen/EayLYO).
 
 <picture>
   <img src="https://github.com/BrandgrandRealMe/matrixLiveWallpaper/blob/main/Lively/preview.gif?raw=true">
