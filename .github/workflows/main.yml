@@ -6,6 +6,7 @@ on:
 
 jobs:
   update_and_zip:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
