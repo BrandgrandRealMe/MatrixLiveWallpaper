@@ -29,6 +29,17 @@ function WEtoCSS(color) {
             return customColorAsCSS
 }
 
+function invertNumber(number) {
+  // Check if the number is within the valid range
+  if (number < 1 || number > 100) {
+    throw new Error("Number must be between 1 and 100");
+  }
+
+  // Invert the number using the total range (100) minus the original number
+  return 101 - number;
+}
+
+
 var colors = { background: "#000000", foregroundPrimary: "#00ff00", foregroundSecondary: null, firstCharacter: "#ffffff"};
 
 var gradientEnabled = false;
@@ -55,7 +66,7 @@ window.wallpaperPropertyListener = {
       refresh();
     }
     if (properties.miscFallSpeed) {
-      fallSpeed = properties.miscFallSpeed.value;
+      fallSpeed = invertNumber(properties.miscFallSpeed.value);
       refresh();
     }
     if (properties.miscSymbolSize) {
