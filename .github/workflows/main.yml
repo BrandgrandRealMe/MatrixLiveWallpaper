@@ -39,12 +39,12 @@ jobs:
       - name: Zip Lively folder
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip alve-revived-lively-${{ steps.get_version.outputs.VERSION }}
+          args: zip -qq -r matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip matrix-lively-${{ steps.get_version.outputs.VERSION }}
 
       - name: Zip WE folder
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip alve-revived-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
+          args: zip -qq -r matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
 
 
       - name: Upload Lively to Github release
