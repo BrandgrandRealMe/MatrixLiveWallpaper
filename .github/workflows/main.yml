@@ -29,34 +29,35 @@ jobs:
           find: '{{ver}}'
           replace: ${{ steps.get_version.outputs.VERSION }}
           regex: false
-
+  
       - name: Rename Lively folder
-        run: mv Lively matrix-lively-${{ steps.get_version.outputs.VERSION }}
+        run: mv Lively Matrix-lively-${{ steps.get_version.outputs.VERSION }}
 
       - name: Rename WE 
-        run: mv WallpaperEngine matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
+        run: mv WallpaperEngine Matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
 
       - name: Zip Lively folder
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip matrix-lively-${{ steps.get_version.outputs.VERSION }}
+          args: zip -qq -r Matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip Matrix-lively-${{ steps.get_version.outputs.VERSION }}
 
       - name: Zip WE folder
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
+          args: zip -qq -r Matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip Matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}
 
 
       - name: Upload Lively to Github release
         uses: Shopify/upload-to-release@v2.0.0
         with:
-          name: matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip
-          path: matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip
+          name: Matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip
+          path: Matrix-lively-${{ steps.get_version.outputs.VERSION }}.zip
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload WE to Github release
         uses: Shopify/upload-to-release@v2.0.0
         with:
-          name: matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip
-          path: matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip
+          name: Matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip
+          path: Matrix-WallpaperEngine-${{ steps.get_version.outputs.VERSION }}.zip
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
