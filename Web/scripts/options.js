@@ -16,3 +16,13 @@ var gradientEnabled = qs("gradient") || false;
 var characters = qs("chars") || "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
 var fallSpeed = qs("fs") || 33;
 var symbolSize = qs("ss") || 15;
+
+// Clock stuff
+var clockEnabled = qs("clock") || false;
+var clockSecondsEnabled = qs("clockseconds") || false;
+var clockDateEnabled = qs("clockdate") || false;
+var clockDateFormat = decodeURIComponent(qs("clockdateformat")) || "MMMM DD, YYYY";
+var clockColor = qs("clockcolor") || "#ffffff";
+var clockFontSize = qs("clockfontsize") || "50";
+var dateFontSize = qs("datefontsize") || "30";
+var clockPosition = qs("clockposition") || "middle";
