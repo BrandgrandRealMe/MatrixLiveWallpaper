@@ -23,6 +23,63 @@
     "type": "checkbox",
     "value": false
   },
+  "clockLabel": {
+    "type": "label",
+    "value": "CLOCK"    
+  },
+  "clockEnabled": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Enable Clock"
+  },
+  "clockSecondsEnabled": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Enable Seconds"
+  },
+  "clockDateEnabled": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Enable Date"
+  },
+  "clockDateFormat": {
+    "type": "dropdown",
+    "value": 3,
+    "text": "Date Format",
+    "items": [
+      "MM/DD/YYYY",
+      "DD/MM/YYYY",
+      "YYYY-MM-DD",
+      "MMMM DD, YYYY"
+    ]
+  },
+  "clockColor": {
+    "text": "Clock Color",
+    "type": "color",
+    "value": "#ffffff"
+  },
+  "clockFontSize": {
+   "text" : "Clock Size",
+   "type" : "textbox",
+   "value" : "50"
+  },
+  "dateFontSize": {
+   "text" : "Date Size",
+   "type" : "textbox",
+   "value" : "30"
+  },
+  "clockPosition": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Date Format",
+    "items": [
+      "Middle",
+      "Top Right",
+      "Top Left",
+      "Bottom Right",
+      "Bottom Left"
+    ]
+  },
   "miscLabel": {
     "type": "label",
     "value": "MISC"    
