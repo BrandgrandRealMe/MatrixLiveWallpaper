@@ -1,94 +1,185 @@
 {
-	"file" : "index.html",
-	"general" : 
-	{
-		"properties" : 
-		{
-			"colorsBackground" : 
-			{
-				"index" : 1,
-				"order" : 101,
-				"text" : "Background Color",
-				"type" : "color",
-				"value" : "0 0 0"
+	"file": "index.html",
+	"general": {
+		"properties": {
+			"clockColor": {
+				"index": 14,
+				"order": 114,
+				"text": "Clock Color",
+				"type": "color",
+				"value": "1 1 1"
 			},
-			"colorsEnableGradiant" : 
-			{
-				"index" : 4,
-				"order" : 104,
-				"text" : "Enable Gradient",
-				"type" : "bool",
-				"value" : false
+			"clockDateEnabled": {
+				"index": 12,
+				"order": 112,
+				"text": "Enable Date",
+				"type": "bool",
+				"value": false
 			},
-			"colorsForegroundPrimary" : 
-			{
-				"index" : 2,
-				"order" : 102,
-				"text" : "Foreground Primary Color",
-				"type" : "color",
-				"value" : "0 1 0"
+			"clockDateFormat": {
+				"index": 13,
+				"options": [
+					{
+						"label": "MM/DD/YYYY",
+						"value": "MM/DD/YYYY"
+					},
+					{
+						"label": "DD/MM/YYYY",
+						"value": "DD/MM/YYYY"
+					},
+					{
+						"label": "YYYY-MM-DD",
+						"value": "YYYY-MM-DD"
+					},
+					{
+						"label": "MMMM DD, YYYY",
+						"value": "MMMM DD, YYYY"
+					}
+				],
+				"order": 113,
+				"text": "Date Format",
+				"type": "combo",
+				"value": "MMMM DD, YYYY"
 			},
-			"colorsForegroundSecondary" : 
-			{
-				"index" : 3,
-				"order" : 103,
-				"text" : "Foreground Secondary Color",
-				"type" : "color",
-				"value" : "0 255 0"
+			"clockEnabled": {
+				"index": 10,
+				"order": 110,
+				"text": "Enable clock",
+				"type": "bool",
+				"value": false
 			},
-			"colorsLabel" : 
-			{
-				"index" : 0,
-				"order" : 100,
-				"text" : "Colors",
-				"type" : "group"
+			"clockFontSize": {
+				"index": 15,
+				"order": 115,
+				"text": "Clock Size",
+				"type": "textinput",
+				"value": "50"
 			},
-			"miscCharacters" : 
-			{
-				"index" : 6,
-				"order" : 106,
-				"text" : "Characters",
-				"type" : "textinput",
-				"value" : "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ"
+			"clockLable": {
+				"index": 9,
+				"order": 109,
+				"text": "CLOCK",
+				"type": "group",
+				"value": ""
 			},
-			"miscFallSpeed" : 
-			{
-				"index" : 7,
-				"order" : 107,
-				"text" : "Fall speed",
-				"type" : "slider",
-				"max" : 100,
-				"min" : 1,
-				"precision" : 5,
-				"step" : 1,
-				"value" : 68
+			"clockPosition": {
+				"index": 17,
+				"options": [
+					{
+						"label": "Middle",
+						"value": "middle"
+					},
+					{
+						"label": "Top Left",
+						"value": "top-left"
+					},
+					{
+						"label": "Top Right",
+						"value": "top-right"
+					},
+					{
+						"label": "Bottom Left",
+						"value": "bottom-left"
+					},
+					{
+						"label": "Bottom Right",
+						"value": "bottom-right"
+					}
+				],
+				"order": 117,
+				"text": "Clock Position",
+				"type": "combo",
+				"value": "middle"
 			},
-			"miscLabel" : 
-			{
-				"index" : 5,
-				"order" : 105,
-				"text" : "MISC",
-				"type" : "group"
+			"clockSecondsEnabled": {
+				"index": 11,
+				"order": 111,
+				"text": "Enable Seconds",
+				"type": "bool",
+				"value": false
 			},
-			"miscSymbolSize" : 
-			{
-				"index" : 8,
-				"order" : 108,
-				"text" : "Symbol size",
-				"type" : "textinput",
-				"value" : 15
+			"colorsBackground": {
+				"index": 1,
+				"order": 101,
+				"text": "Background Color",
+				"type": "color",
+				"value": "0 0 0"
 			},
-			"schemecolor" : 
-			{
-				"order" : 0,
-				"text" : "ui_browse_properties_scheme_color",
-				"type" : "color",
-				"value" : "0 0 0"
+			"colorsEnableGradiant": {
+				"index": 4,
+				"order": 104,
+				"text": "Enable Gradient",
+				"type": "bool",
+				"value": false
+			},
+			"colorsForegroundPrimary": {
+				"index": 2,
+				"order": 102,
+				"text": "Foreground Primary Color",
+				"type": "color",
+				"value": "0 1 0"
+			},
+			"colorsForegroundSecondary": {
+				"index": 3,
+				"order": 103,
+				"text": "Foreground Secondary Color",
+				"type": "color",
+				"value": "0 255 0"
+			},
+			"colorsLabel": {
+				"index": 0,
+				"order": 100,
+				"text": "Colors",
+				"type": "group"
+			},
+			"datefontsize": {
+				"index": 16,
+				"order": 116,
+				"text": "Date Size",
+				"type": "textinput",
+				"value": "30"
+			},
+			"miscCharacters": {
+				"index": 6,
+				"order": 106,
+				"text": "Characters",
+				"type": "textinput",
+				"value": "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ"
+			},
+			"miscFallSpeed": {
+				"index": 7,
+				"max": 100,
+				"min": 1,
+				"order": 107,
+				"precision": 5,
+				"step": 1,
+				"text": "Fall speed",
+				"type": "slider",
+				"value": 68
+			},
+			"miscLabel": {
+				"index": 5,
+				"order": 105,
+				"text": "MISC",
+				"type": "group"
+			},
+			"miscSymbolSize": {
+				"index": 8,
+				"order": 108,
+				"text": "Symbol size",
+				"type": "textinput",
+				"value": 15
+			},
+			"schemecolor": {
+				"order": 0,
+				"text": "ui_browse_properties_scheme_color",
+				"type": "color",
+				"value": "0 0 0"
 			}
 		}
 	},
-	"preview" : "preview.gif",
-	"title" : "Matrix",
-	"type" : "web",
-	"version" : 0
+	"preview": "preview.gif",
+	"title": "Matrix",
+	"type": "web",
+	"version": "{{ver}}"
 }

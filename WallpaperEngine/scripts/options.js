@@ -47,6 +47,16 @@ var characters = "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKL
 var fallSpeed = 33;
 var symbolSize = 15;
 
+// Clock stuff
+var clockEnabled = false;
+var clockSecondsEnabled = false;
+var clockDateEnabled = false;
+var clockDateFormat = "MMMM DD, YYYY";
+var clockColor = "#ffffff";
+var clockFontSize = "50";
+var dateFontSize = "30";
+var clockPosition = "middle";
+
 window.wallpaperPropertyListener = {
   applyUserProperties: function (properties) {
     if (properties.colorsBackground) {
@@ -72,6 +82,38 @@ window.wallpaperPropertyListener = {
     if (properties.miscSymbolSize) {
       symbolSize = properties.miscSymbolSize.value;
       refresh();
+    }
+    if (properties.clockEnabled) {
+      clockEnabled = properties.clockEnabled.value;
+      ClockRefresh();
+    }
+    if (properties.clockSecondsEnabled) {
+      clockSecondsEnabled = properties.clockSecondsEnabled.value;
+      ClockRefresh();
+    }
+    if (properties.clockDateEnabled) {
+      clockDateEnabled = properties.clockDateEnabled.value;
+      ClockRefresh();
+    }
+    if (properties.clockDateFormat) {
+      clockDateFormat = properties.clockDateFormat.value;
+      ClockRefresh();
+    }
+    if (properties.clockColor) {
+      clockColor = properties.clockColor.value;
+      ClockRefresh();
+    }
+    if (properties.clockFontSize) {
+      clockFontSize = properties.clockFontSize.value;
+      ClockRefresh();
+    }
+    if (properties.dateFontSize) {
+      dateFontSize = properties.dateFontSize.value;
+      ClockRefresh();
+    }
+    if (properties.clockPosition) {
+      clockPosition = properties.clockPosition.value;
+      ClockRefresh();
     }
   }
 }
