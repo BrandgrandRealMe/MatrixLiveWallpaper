@@ -60,7 +60,7 @@ function refresh() {
   // Setting up the drops
   drops = [];
   for (var i = 0; i < columns; i++) {
-    drops[i] = 1;
+    drops[i] = -(2 * Math.random() * characters.length);
   }
   
   if (drawId) clearInterval(drawId);
